@@ -6,19 +6,19 @@ from die import Die
 die = Die()
 
 results = []
-for roll_num in range(1000):
+for roll_num in range(10000):
     result = die.roll()
-    results.append(results)
+    results.append(result)
 
 frequencies = []
 for value in range(1, die.num_sides+1):
-    frequency = results.count(object)
+    frequency = results.count(value)
     frequencies.append(frequency)
 
 
 hist = pygal.Bar()
 
-hist.title = "Results of rolling one D6 1000 times."
+hist.title = "Results of rolling one D6 10000 times."
 hist.x_labels = ['1', '2', '3', '4', '5', '6']
 hist.x_title = "Result"
 hist.y_title = "Frequency of Result"
